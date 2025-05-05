@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Farmer | Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- here our header section started -->
+    <header class="section-navbar">
+        <section class="top_txt">
+            <div class="head container">
+
+                <div class="head_txt">
+                    <p>Buy and Sell your Agricultural Products Easily
+                    </p>
+
+                </div>
+                <div class="sing_in_up" id="navbar-login">
+                    <a id="auth-link-text" href="login.html">LOGIN</a>
+          
+                  </div>
+            </div>
+
+        </section>
+        <div class="container">
+            <div class="nav-brand">
+                <!-- <a href="index.html"><img src="./public/logo1.png" alt="Loading..." class="logo" width="80%" -->
+                        <!-- height="auto"></a> -->
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sell.html" class="nav-link">Sell</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="addtocart.html" class="nav-link add-to-cart-button" id="cartValue"><i
+                                class="fa-solid fa-cart-shopping"> 0 </i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- here our header section ended -->
+
+    <!-- ========== Start here our main section ========== -->
+
+    <section class="addToCartElement">
+        <div class="container">
+            <section>
+                <div id="productCartContainer"></div>
+            </section>
+
+            <section class="productCartTotalElem">
+                <div class="productCartTotalElement">
+                    <p>Selected Offer Summary</p>
+                    <div class="productOrderTotal">
+                        <div>
+                            <p>Sub Total:</p>
+                            <p class="productSubTotal">0</p>
+                        </div>
+                        <div>
+                            <p>Tax:</p>
+                            <p class="productTax">₹30</p>
+                        </div>
+                        <hr />
+                        <div>
+                            <p>Final Total:</p>
+                            <p class="productFinalTotal">0</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+        <div class="my-order-container">
+            <button class="my-place-order-button" id="placeOrderButton">Make Payment</button>
+        </div>
+
+       
+    </section>
+
+    <!-- Template for a product -->
+    <template id="productCartTemplate">
+        <div class="cards" id="cardValue">
+            <article class="information [ card ]">
+                <div>
+                    <span class="category"></span>
+                </div>
+                <div class="imageContainer">
+                    <img class="productImage" src="" alt="" />
+                </div>
+
+                <h2 class="productName"></h2>
+
+                <p class="productPrice"></p>
+
+                <div class="stockElement">
+                    <button class="cartIncrement">+</button>
+                    <p class="productQuantity" data-quantity="1">1</p>
+                    <button class="cartDecrement">-</button>
+                </div>
+
+                <!-- <button class="add-to-cart-button">Add To Cart</button> -->
+                <button class="add-to-cart-button remove-to-cart-button">
+                    Remove
+                </button>
+            </article>
+        </div>
+    </template>
+
+    <!-- ========== End here our main section ========== -->
+
+
+    <!-- here our footer section started -->
+
+    <footer class="section-footer">
+        <div class="footer-container container">
+            <div class="content_1">
+                <img src="./public/logo1.png" alt="logo" />
+                <p>
+                    Welcome to Link Farmer, your destination for
+                    buying and selling!
+                </p>
+                <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" />
+            </div>
+            <div class="content_2">
+                <h4>Buying</h4>
+                <a href="#">Grains</a>
+                <a href="#">Vegetables</a>
+                <a href="#">Green Vegetables</a>
+                <a href="#">At lowest price</a>
+            </div>
+            <div class="content_3">
+                <h4>Experience</h4>
+                <a href="./contact.html">Contact Us</a>
+                <a href="" target="_blank">Payment Method</a>
+                <a href="" target="_blank"></a>
+                <a href="" target="_blank"></a>
+            </div>
+            <div class="content_4">
+                <h4>NEWS</h4>
+                <p>Be the first to know about new<br />Products!</p>
+                <div class="f-mail">
+                    <input type="email" placeholder="Your Email" />
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <hr />
+            </div>
+        </div>
+        <div class="f-design">
+            <div class="f-design-txt">
+                <p>Design and Code by Mohammad Kaif</p>
+            </div>
+        </div>
+    </footer>
+    <!-- here our footer section ended -->
+
+    <script type="module" src="./showCartProduct.js"></script>
+    <script src="script.js" type="module"></script>
+    
+
+</body>
+
+</html>

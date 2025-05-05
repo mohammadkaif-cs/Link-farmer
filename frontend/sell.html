@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Farmer | Sell</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+        }
+        input, textarea, select {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="section-navbar">
+        <section class="top_txt">
+            <div class="head container">
+
+                <div class="head_txt">
+                    <p> Buy and Sell your Agricultural Products Easily 
+                    </p>
+
+                </div>
+                <div class="sing_in_up" id="navbar-login">
+                    <a id="auth-link-text" href="login.html">LOGIN</a>
+          
+                  </div>
+            </div>
+
+        </section>
+        <div class="container">
+            <div class="nav-brand">
+                <!-- <a href="index.html"><img src="./public/logo1.png" alt="Loading..." class="logo" width="80%" -->
+                        <!-- height="auto"></a> -->
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sell.html" class="nav-link">Sell</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="addtocart.html" class="nav-link add-to-cart-button" id="cartValue"><i
+                                class="fa-solid fa-cart-shopping"> 0 </i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- header ends -->
+    <div class="container my-sell-container">
+        <h1>Sell Your Agricultural Products</h1>
+        <form action="#" method="post" id="sellingProducts" enctype="multipart/form-data">
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" name="productName" required>
+
+
+            <label for="productCategory">Product Category</label>
+            <input type="text" id="productCategory" name="productCategory" placeholder="e.x grain or vegetable" required>
+
+
+            <label for="productDescription">Product Description</label>
+            <textarea id="productDescription" name="productDescription" rows="4" required></textarea>
+
+            <label for="productPrice">Price (₹)</label>
+            <input type="text" id="productPrice" name="productPrice"  required>
+
+            <label for="productQuantity">Quantity (KG)</label>
+            <input type="text" id="productQuantity"  name="productQuantity" required>
+
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="e.x +91980430xxxx" required>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="abc@kaif.com" required>
+
+
+            <label for="productImage">Product Image</label>
+            <input type="file" id="productImage" name="productImage" accept="image/*" required>
+
+            <button type="submit">Submit Product</button>
+        </form>
+    </div>
+
+    <!-- footer starts -->
+    <footer class="section-footer">
+        <div class="footer-container container">
+            <div class="content_1">
+                <img src="./public/logo1.png" alt="logo" />
+                <p>
+                    Welcome to Link Farmer, your destination for
+                    buying and selling!
+                </p>
+                <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" />
+            </div>
+            <div class="content_2">
+                <h4>Buying</h4>
+                <a href="#">Grains</a>
+                <a href="#">Vegetables</a>
+                <a href="#">Green Vegetables</a>
+                <a href="#">At lowest price</a>
+            </div>
+            <div class="content_3">
+                <h4>Experience</h4>
+                <a href="./contact.html">Contact Us</a>
+                <a href="" target="_blank">Payment Method</a>
+                <a href="" target="_blank"></a>
+                <a href="" target="_blank"></a>
+            </div>
+            <div class="content_4">
+                <h4>NEWS</h4>
+                <p>Be the first to know about new<br />Products!</p>
+                <div class="f-mail">
+                    <input type="email" placeholder="Your Email" />
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <hr />
+            </div>
+        </div>
+        <div class="f-design">
+            <div class="f-design-txt">
+                <p>Design and Code by Mohammad Kaif</p>
+            </div>
+        </div>
+    </footer>
+    <!-- here our footer section ended -->
+
+    <script type="module">
+        document.getElementById("sellingProducts").addEventListener("submit",async(event)=>{
+            event.preventDefault();
+            
+
+            const productName=document.getElementById("productName").value;
+            const productCategory=document.getElementById("productCategory").value;
+            const productDescription=document.getElementById("productDescription").value;
+            const productPrice=document.getElementById("productPrice").value;
+            const productQuantity=document.getElementById("productQuantity").value;
+            const phoneNumber=document.getElementById("phoneNumber").value;
+            const email=document.getElementById("email").value;
+
+            const allData = {productName,productCategory,productDescription,productPrice,productQuantity,phoneNumber,email}
+            //console.log(allData)
+            try{
+                const token=localStorage.getItem("token")
+                if(token){
+              const allData = {productName,productCategory,productDescription,productPrice,productQuantity,phoneNumber,email}
+              const response = await fetch("http://localhost:5000/api/selling",{
+                method: "POST",
+                headers:{
+                    "Content-Type":"application/json",
+                },
+                body:JSON.stringify(allData),
+              });
+
+              const realData = await response.text();
+
+              if(response.ok){
+                alert("Application Submitted Succesfully")
+                window.location.href="./redirect.html"
+              }else{
+                alert("Failed to Process the data")
+              }
+            }else{
+                window.location.href="./login.html"
+            }
+
+               
+            }catch(error){
+                alert("Failed")
+            }
+
+        })
+
+    </script>
+     <script src="main.js" type="module"></script>    
+     <script src="script.js" type="module"></script>
+</body>
+</html>

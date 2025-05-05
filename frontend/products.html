@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+  <title>Link Farmer | Products </title>
+</head>
+
+<body>
+  <header class="section-navbar">
+    <section class="top_txt">
+      <div class="head container">
+
+        <div class="head_txt">
+          <p>Buy and Sell your Agricultural Products Easily
+          </p>
+
+        </div>
+        <div class="sing_in_up" id="navbar-login">
+          <a id="auth-link-text" href="login.html">LOGIN</a>
+
+        </div>
+      </div>
+
+    </section>
+    <div class="container">
+      <div class="nav-brand">
+        <!-- <a href="index.html"><img src="./public/logo1.png" alt="Loading..." class="logo" width="80%" height="auto"></a> -->
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li class="nav-item">
+            <a href="/" class="nav-link">Home</a>
+          </li>
+        
+          <li class="nav-item">
+            <a href="products.html" class="nav-link">Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="sell.html" class="nav-link">Sell</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="addtocart.html" class="nav-link add-to-cart-button" id="cartValue"><i
+                class="fa-solid fa-cart-shopping"> 0 </i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ========== Start here our hero section ========== -->
+
+ 
+
+  <!-- ========== Start our policy ========== -->
+
+
+  <!-- ========== End our policy ========== -->
+
+  <!-- ========== Start our products ========== -->
+
+  <section class="section-products container">
+    <div class="">
+      <h2 class="section-common--heading">
+        Checkout Link Farmer Products
+      </h2>
+    </div>
+    <section class="container">
+      <div id="productContainer">
+
+      </div>
+    </section>
+  </section>
+
+
+  <!-- ========== End our products ========== -->
+
+
+  <!-- ========== Start product template section ========== -->
+
+  <template id="productTemplate">
+    <div class="cards" id="cardValue">
+      <article class="information [card]">
+        <span class="category"></span>
+        <div class="imageContainer">
+          <img class="productImage" src="" alt="" />
+        </div>
+        <h2 class="productName"></h2>
+
+        <div class="productRating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <p class="productDescription"></p>
+
+        <div class="productPriceElement">
+          <p class="productPrice"></p>
+          <p class="productActualPrice"></p>
+        </div>
+
+        <div class="productStockElement">
+          <p class="productProperty">Total Stocks Available: </p>
+          <p class="productStock"></p>
+        </div>
+
+        <div class="productQuantityElement">
+          <p class="productProperty">Quantity(KG)</p>
+          <div class="stockElement" id="stockElem">
+            <button class="cartIncrement">+</button>
+            <p class="productQuantity">1</p>
+            <button class="cartDecrement">-</button>
+          </div>
+        </div>
+
+        <button class="add-to-cart-button">
+          <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+        </button>
+      </article>
+    </div>
+  </template>
+
+
+  <!-- ========== End product template section ========== -->
+
+
+  
+
+  <!-- ========== End why choose us ========== -->
+
+  <!-- ========== Start footer section ========== -->
+  <footer class="section-footer">
+    <div class="footer-container container">
+      <div class="content_1">
+        <img src="./public/logo1.png" alt="logo" />
+        <p>
+          Welcome to Link Farmer, your destination for
+          buying and selling!
+        </p>
+        <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" />
+      </div>
+      <div class="content_2">
+        <h4>Buying</h4>
+        <a href="#">Grains</a>
+        <a href="#">Vegetables</a>
+        <a href="#">Green Vegetables</a>
+        <a href="#">At lowest price</a>
+      </div>
+      <div class="content_3">
+        <h4>Experience</h4>
+        <a href="./contact.html">Contact Us</a>
+        <a href="" target="_blank">Payment Method</a>
+        <a href="" target="_blank"></a>
+        <a href="" target="_blank"></a>
+      </div>
+      <div class="content_4">
+        <h4>NEWS</h4>
+        <p>Be the first to know about new<br />Products!</p>
+        <div class="f-mail">
+          <input type="email" placeholder="Your Email" />
+          <i class="bx bx-envelope"></i>
+        </div>
+        <hr />
+      </div>
+    </div>
+    <div class="f-design">
+      <div class="f-design-txt">
+        <p>Design and Code by Mohammad Kaif</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== End footer section ========== -->
+
+
+
+<script type="module" src="main.js"></script>
+<script src="script.js" type="module"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+[
+    {
+      "id": 1,
+      "name": "Wheat",
+      "category": "Grain",
+      "brand": "Link Farmer",
+      "price": 30.00,
+      "stock": 1000,
+      "description": "Elevate your recipes with our high-quality wheat, perfect for everything from fresh bread to nutritious cereals.",
+      "image": "../public/wheat.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Rice",
+      "category": "Grain",
+      "brand": "Link Farmer",
+      "price": 35.00,
+      "stock": 1000,
+      "image": "../public/rice.png",
+      "description": "Freshly harvested and expertly milled, our rice promises exceptional taste and perfect texture every time."
+    },
+    {
+      "id": 3,
+      "name": "Bulgur",
+      "category": "Grain",
+      "brand": "Link Farmer",
+      "price": 32.00,
+      "stock": 200,
+      "image": "../public/Bulgur.png",
+      "description": "Our bulgur is expertly processed to maintain its natural goodness, offering a quick and easy way to enhance your meals with nutritious whole grains."
+    },
+    {
+      "id": 4,
+      "name": "Corn",
+      "category": "Grain",
+      "brand": "Link Farmer",
+      "price": 20.99,
+      "stock": 400,
+      "image": "../public/corn.png",
+      "description": "Freshly harvested sweet corn, perfect for boiling, grilling, or roasting! Get it while it's in season and enjoy the sweet taste of summer. Support local farmers and buy from us today!"
+    },
+    {
+      "id": 5,
+      "name": "Oats",
+      "category": "Grain",
+      "brand": "Link Farmer",
+      "price": 40.00,
+      "stock": 500,
+      "image": "../public/oats.png",
+      "description": "Get your oat on! Our oats are carefully sourced from local farms to ensure the highest quality and freshness. Perfect for oatmeal, baking, or as a healthy snack."
+    },
+    {
+      "id": 6,
+      "name": "Quinoa",
+      "category": "Grain",
+      "brand": "Link Farmer",
+      "price": 100.00,
+      "stock": 200,
+      "image": "../public/Quinoa.png",
+      "description": "Quinoa lovers unite! Our quinoa is carefully sourced from local farms to ensure the highest quality and freshness. Perfect for cooking, baking, or as a healthy snack."
+    },
+    {
+      "id": 7,
+      "name": "Rye",
+      "category": "Grain",
+      "brand": "Link Farmer",
+      "price": 120.99,
+      "stock": 250,
+      "image": "../public/rye.jpg",
+      "description": "Get Rye and make oil as per your need"
+    },
+    {
+      "id": 8,
+      "name": "Beans",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 15,
+      "stock": 100,
+      "image": "../public/beans.png",
+      "description": "Experience the rich, creamy flavor of our carefully selected beans! Perfect for vegans, vegetarians, and anyone looking for a healthy, protein-packed meal option."
+    },
+    {
+      "id": 9,
+      "name": "Beet Root",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 17.99,
+      "stock": 150,
+      "image": "../public/beetroot.png",
+      "description": "Add a pop of color and a burst of nutrition to your meals with our vibrant, juicy beetroot! Packed with vitamins, minerals, and antioxidants, our beetroot is the perfect addition to any salad, smoothie, or recipe."
+    },
+    {
+      "id": 10,
+      "name": "Bitter Guord",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 20.00,
+      "stock": 150,
+      "image": "../public/bitter.webp",
+      "description": "Experience the unique flavor and numerous health benefits of our premium bitter gourd! Rich in vitamins, minerals, and antioxidants, our bitter gourd is the perfect addition to any meal."
+    },
+    {
+      "id": 11,
+      "name": "Brinjal",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 10.00,
+      "stock": 200,
+      "image": "../public/brinjal.png",
+      "description": "Experience the rich, meaty flavor of our premium brinjal! Whether you're grilling, roasting, or sautéing, our brinjal is sure to impress with its tender texture and deep flavor."
+    },
+    {
+      "id": 12,
+      "name": "Cabbage",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 12.00,
+      "stock": 209,
+      "image": "../public/cabbage.png",
+      "description": "Get ready to boost your health with our nutrient-dense cabbage! High in fiber, vitamins, and minerals, our cabbage is the perfect way to support your overall health and wellbeing."
+    },
+    {
+      "id": 13,
+      "name": "Capsicum",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 10.00,
+      "stock": 100,
+      "image": "../public/capsicum.png",
+      "description": "Add a pop of color and flavor to your meals with our vibrant, crunchy capsicum! Rich in vitamins, minerals, and antioxidants, our capsicum is the perfect addition to any dish."
+    },
+    {
+      "id": 14,
+      "name": "Cauliflower",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 14.00,
+      "stock": 200,
+      "image": "../public/cauliflower.png",
+      "description": "Get ready to elevate your cooking with our artisanal cauliflower! Sourced from local farms and carefully curated, our cauliflower is the perfect choice for chefs and home cooks alike."
+    },
+    {
+      "id": 15,
+      "name": "Green Chilli",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 8,
+      "stock": 600,
+      "image": "../public/greenchilli1.webp",
+      "description": "Add a burst of flavor and heat to your meals with our fresh, crunchy green chilli! Perfect for adding a spicy kick to your favorite dishes."
+    },
+    {
+      "id": 16,
+      "name": "Cucumber",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 9.00,
+      "stock": 400,
+      "image": "../public/cucumber.png",
+      "description": "Experience the vibrant green color and snappy texture of our fresh green cucumber! Whether you're using it in a salad, as a crudité, or as a topping, our green cucumber is sure to impress."
+    },
+    {
+      "id": 17,
+      "name": "Ginger",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 25,
+      "stock": 200,
+      "image": "../public/ginger.webp",
+      "description": "Unleash the power of green ginger in your cooking! Our fresh, vibrant green ginger is perfect for adding a burst of flavor and nutrition to your favorite dishes."
+    },
+    {
+      "id": 18,
+      "name": "Jackfruit",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 40.00,
+      "stock": 80,
+      "image": "../public/jackfruit.avif",
+      "description": "Discover the versatility of our fresh green jackfruit! Use it in tacos, curries, BBQ, or as a meat substitute in your favorite recipes."
+    },
+    {
+      "id": 19,
+      "name": "Lady Finger",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 10.00,
+      "stock": 200,
+      "image": "../public/ladyfinger.webp",
+      "description": "Add some crunch and flavor to your meals with our fresh green lady fingers! Perfect for sautéing, frying, or adding to soups and stews."
+    },
+    {
+      "id": 20,
+      "name": "Onion",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 10.00,
+      "stock": 700,
+      "image": "../public/onion.png",
+      "description": "Add a punch of flavor and freshness to your dishes with our crisp and delicious green onions! Perfect for salads, sandwiches, and as a garnish for soups and entrees."
+    },
+    {
+      "id": 21,
+      "name": "Pea",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 20.00,
+      "stock": 800,
+      "image": "../public/pea.jpg",
+      "description": "Take your cooking to the next level with the versatility of our onions! Use them in everything from burgers and sandwiches to soups and stews."
+    },
+    {
+      "id": 22,
+      "name": "Pointed Guord",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 10.00,
+      "stock": 200,
+      "image": "../public/pointed.jpg",
+      "description": "Experience the unique flavor and texture of our pointed gourds! Perfect for stir-fries, curries, and soups, these versatile vegetables will add a new dimension to your cooking."
+
+    },
+    {
+      "id": 23,
+      "name": "Potato",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 15,
+      "stock": 600,
+      "image": "../public/potato.png",
+      "description": "Unleash the flavor and nutrition of our premium potatoes! Perfect for baking, mashing, roasting, or frying, these spuds are a staple for any kitchen."
+    },
+    {
+      "id": 24,
+      "name": "Pumpkin",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 20.00,
+      "stock": 150,
+      "image": "../public/pumpkin.png",
+      "description": "Get ready to fall in love with the sweet and slightly nutty taste of our pumpkin! High in vitamins and minerals, they're a healthy and delicious addition to any meal."
+    },
+    {
+      "id": 25,
+      "name": "Spinach",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 10,
+      "stock": 200,
+      "image": "../public/spinach.png",
+      "description": "Unlock the nutritional power of our fresh spinach! Packed with iron, calcium, and vitamins, this superfood is the perfect addition to any healthy diet."
+    },
+    {
+      "id": 26,
+      "name": "Sponge Guord",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 24.00,
+      "stock": 200,
+      "image": "../public/sponge.webp",
+      "description": "Experience the unique texture and flavor of our sponge gourd! With its soft, spongy interior and mild taste, it's the perfect addition to soups, stews, and stir-fries."
+    },
+    {
+      "id": 27,
+      "name": "Tomato",
+      "category": "Vegetables",
+      "brand": "Link Farmer",
+      "price": 15,
+      "stock": 290,
+      "image": "../public/tomato.png",
+      "description": "Sink your teeth into the juicy sweetness of our vine-ripened tomatoes! Perfect for snacking, salads, sandwiches, and sauces."
+    }
+  ]

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light background */
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+        }
+        .payment-container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+        }
+        .payment-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .payment-header h2 {
+            color: #333;
+            font-weight: 700;
+        }
+        .btn-custom {
+            background-color: #6a11cb;
+            color: white;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: #2575fc;
+        }
+        .payment-option {
+            border: 1px solid #ced4da;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .payment-option:hover {
+            background-color: #f1f1f1;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="payment-container">
+    <div class="payment-header">
+        <h2><i class="fas fa-credit-card"></i> Payment Options</h2>
+        <p class="text-muted">Choose your preferred payment method.</p>
+    </div>
+    
+    <form id="payment-form">
+        <div class="payment-option" id="card-option" onclick="selectPayment('card')">
+            <h5>Credit/Debit Card</h5>
+            <p>Pay securely using your credit or debit card.</p>
+            <div id="card-details" style="display: none;">
+                <div class="form-group">
+                    <label for="cardName">Cardholder Name</label>
+                    <input type="text" class="form-control" id="cardName" placeholder="Enter cardholder name">
+                </div>
+                <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" class="form-control" id="cardNumber" placeholder="Enter card number">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="expiry">Expiry Date</label>
+                        <input type="text" class="form-control" id="expiry" placeholder="MM/YY">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="cvc">CVC</label>
+                        <input type="text" class="form-control" id="cvc" placeholder="CVC">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-option" id="cod-option" onclick="selectPayment('cod')">
+            <h5>Cash on Delivery</h5>
+            <p>Pay in cash when your order is delivered.</p>
+        </div>
+
+        <button type="submit" class="btn btn-custom btn-block">Pay Now</button>
+    </form>
+    
+    <div class="footer">
+        Link Farmer
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    let selectedPayment = 'cod'; 
+
+    function selectPayment(method) {
+        selectedPayment = method;
+        document.getElementById('card-details').style.display = (method === 'card') ? 'block' : 'none';
+    }
+
+    document.getElementById('payment-form').addEventListener('submit', function(event) {
+        if (selectedPayment === 'card') {
+            const cardName = document.getElementById('cardName').value;
+            const cardNumber = document.getElementById('cardNumber').value;
+            const expiry = document.getElementById('expiry').value;
+            const cvc = document.getElementById('cvc').value;
+
+            if (!cardName || !cardNumber || !expiry || !cvc) {
+                alert('Please fill in all card details.');
+                event.preventDefault();
+            } else {
+                window.location.href="./paymentconfirm.html"
+                alert('Payment processed successfully!'); 
+                
+            }
+        } else {
+            window.location.href="./paymentconfirm.html"
+            alert('Order will be processed for Cash on Delivery!');
+            
+        }
+    });
+
+           // Retrieve data from local storage
+const orderData = JSON.parse(localStorage.getItem('cartProductMine')); 
+
+
+const items = orderData.map(item => ({
+    productId: item.id,
+    quantity: item.quantity,
+    price: item.price
+}));
+
+// Send data to the backend
+async function createOrder() {
+    const userId = '1234'; 
+
+    try {
+        const response = await fetch('http://localhost:5000/api/orders', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ userId, items, paymentMethod: 'credit_card' }) // Adjust paymentMethod as needed
+        });
+
+        if (response.ok) {
+            const result = await response.json();
+            console.log('Order created successfully:', result);
+            // Clear local storage if needed
+            localStorage.removeItem('cartProductMine');
+        } else {
+            console.error('Error creating order:', response.statusText);
+        }
+    } catch (error) {
+        console.error('Fetch error:', error);
+    }
+}
+
+// Call the function when ready to create the order
+createOrder();
+</script>
+</body>
+</html>

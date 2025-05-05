@@ -1,0 +1,136 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Link Farmer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form id="register-form" action="login.html" method="post">
+
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Enter your Full Name" name="fullName" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter a Validate Email" name="email" required>
+
+            <label for="number">Phone Number</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter your Phone Number" required>
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Enter your Proper Address" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password must be strong like : Kaifans89@" name="password" required>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="text" id="confirmPassword" name="confirmPassword" placeholder="Enter your Password again" required>
+
+            <button type="submit">Register</button>
+        </form>
+        <div class="message">
+            <p>Already have an account? <a href="login.html">Login</a>.</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById("register-form").addEventListener("submit",async function(event){
+            event.preventDefault();
+
+            const fullName=document.getElementById("fullName").value;
+            const email=document.getElementById("email").value;
+            const phoneNumber=document.getElementById("phoneNumber").value;
+            const address=document.getElementById("address").value;
+            const password=document.getElementById("password").value;
+            const confirmPassword=document.getElementById("confirmPassword").value;
+
+            if(password !== confirmPassword){
+                alert("password do not match")
+                return;
+            }
+
+            const userData= {fullName,email,phoneNumber,address,password,confirmPassword};
+            
+
+            try{
+                const response = await fetch('http://localhost:5000/api/register',{
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(userData),
+                });
+
+                const data = await response.text();
+                console.log(response)
+                 
+
+                if(response.ok){
+                   alert("Registered Successfully")
+                   window.location.href="./login.html"                    
+                } else{
+                    alert(data.error);
+                }
+            }catch(error){                               
+                console.error('Error:',error);
+                alert("failed to register");
+
+            }
+        })
+
+    </script>
+ 
+</body>
+
+</html>
